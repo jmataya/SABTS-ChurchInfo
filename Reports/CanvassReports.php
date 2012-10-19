@@ -148,7 +148,7 @@ function CanvassProgressReport ($iFYID)
 	$percentStr = sprintf ("%.0f%%", ($totalDone / $totalToDo) * 100);
 	$pdf->WriteAt ($percentX, $curY, $percentStr);
 
-	$pdf->Output("CanvassProgress" . date("Ymd") . ".pdf", true);
+	$pdf->Output("CanvassProgress" . date("Ymd") . ".pdf", "D");
 }
 
 function CanvassBriefingSheets ($iFYID)
@@ -324,7 +324,7 @@ function CanvassBriefingSheets ($iFYID)
 		$pdf->AddPage ();
 	}
 
-	$pdf->Output("CanvassBriefing" . date("Ymd") . ".pdf", true);
+	$pdf->Output("CanvassBriefing" . date("Ymd") . ".pdf", "D");
 }
 
 function CanvassSummaryReport ($iFYID)
@@ -381,7 +381,7 @@ function CanvassSummaryReport ($iFYID)
 		mysql_data_seek ($rsCanvassData, 0);
 	}	
 
-	$pdf->Output("CanvassSummary" . date("Ymd") . ".pdf", true);
+	$pdf->Output("CanvassSummary" . date("Ymd") . ".pdf", "D");
 }
 
 function CanvassNotInterestedReport ($iFYID)
@@ -428,7 +428,7 @@ function CanvassNotInterestedReport ($iFYID)
 		$pdf->Write (4, $str . "\n\n");
 	}
 
-	$pdf->Output("CanvassNotInterested" . date("Ymd") . ".pdf", true);
+	$pdf->Output("CanvassNotInterested" . date("Ymd") . ".pdf", "D");
 }
 
 if ($sWhichReport == "Briefing") {

@@ -117,7 +117,7 @@ $curY += 5;
 $pdf->WriteAt ($pdf->leftX, $curY, "Number of Voting Members: " . $votingMemberCount);
 
 if ($iPDFOutputType == 1)
-	$pdf->Output("VotingMembers" . date("Ymd") . ".pdf", true);
+	$pdf->Output("VotingMembers" . date("Ymd") . ".pdf", "D");
 else
 	$pdf->Output();	
 ?>

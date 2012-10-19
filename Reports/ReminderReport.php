@@ -374,7 +374,7 @@ while ($aFam = mysql_fetch_array($rsFamilies)) {
 }
 
 if ($iPDFOutputType == 1) {
-	$pdf->Output("ReminderReport" . date("Ymd") . ".pdf", true);
+	$pdf->Output("ReminderReport" . date("Ymd") . ".pdf", "D");
 } else {
 	$pdf->Output();
 }

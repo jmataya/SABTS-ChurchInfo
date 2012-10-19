@@ -70,7 +70,7 @@ while ($aFam = mysql_fetch_array($rsFamilies)) {
 }
 
 if ($iPDFOutputType == 1)
-	$pdf->Output("NewsLetterLabels" . date("Ymd") . ".pdf", true);
+	$pdf->Output("NewsLetterLabels" . date("Ymd") . ".pdf", "D");
 else
 	$pdf->Output();	
 ?>

@@ -339,7 +339,7 @@ if ($output == "pdf") {
 	}
 
 	if ($iPDFOutputType == 1)
-		$pdf->Output("Deposit-" . $iDepositSlipID . ".pdf", true);
+		$pdf->Output("Deposit-" . $iDepositSlipID . ".pdf", "D");
 	else
 		$pdf->Output();
 

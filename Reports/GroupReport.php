@@ -314,7 +314,7 @@ class PDF_Directory extends ChurchInfoReport
 	}
 
 if ($iPDFOutputType == 1)
-	$pdf->Output("GroupDirectory-" . date("Ymd-Gis") . ".pdf", true);
+	$pdf->Output("GroupDirectory-" . date("Ymd-Gis") . ".pdf", "D");
 else
 	$pdf->Output();
 ?>

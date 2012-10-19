@@ -401,7 +401,7 @@ if ($output == "pdf") {
 	}
 
 	if ($iPDFOutputType == 1)
-		$pdf->Output("TaxReport" . date("Ymd") . ".pdf", true);
+		$pdf->Output("TaxReport" . date("Ymd") . ".pdf", "D");
 	else
 		$pdf->Output();
 

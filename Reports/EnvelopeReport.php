@@ -144,7 +144,7 @@ while ($aRow = mysql_fetch_array($rsRecords))
 }
 
 if ($iPDFOutputType == 1)
-	$pdf->Output("EnvelopeAssingments-" . date("Ymd-Gis") . ".pdf", true);
+	$pdf->Output("EnvelopeAssingments-" . date("Ymd-Gis") . ".pdf", "D");
 else
 	$pdf->Output();	
 ?>
