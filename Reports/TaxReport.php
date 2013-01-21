@@ -106,7 +106,7 @@ if (!empty($_POST["family"])) {
 }
 
 // Get Criteria string
-eregi("WHERE (plg_PledgeOrPayment.*)", $sSQL, $aSQLCriteria);
+preg_match("/WHERE (plg_PledgeOrPayment.*)/", $sSQL, $aSQLCriteria);
 
 // Add SQL ORDER
 $sSQL .= " ORDER BY plg_FamID, plg_date ";
@@ -416,7 +416,7 @@ if ($output == "pdf") {
 	$eol = "\r\n";
 	
 	// Build headings row
-	eregi ("SELECT (.*) FROM ", $sSQL, $result);
+	preg_match ("SELECT (.*) FROM ", $sSQL, $result);
 	$headings = explode(",",$result[1]);
 	$buffer = "";
 	foreach ($headings as $heading) {

@@ -1398,7 +1398,7 @@ function validateCustomField($type, &$data, $col_Name, &$aErrors)
 		case 8:
 			if (strlen($data) != 0)
 			{
-				$data = eregi_replace($aLocaleInfo["thousands_sep"], "", $data);  // remove any thousands separators
+				$data = preg_replace($aLocaleInfo["thousands_sep"], "", $data);  // remove any thousands separators
 				if (!is_numeric($data))
 				{
 					$aErrors[$col_Name] = gettext("Invalid Number");
@@ -1416,7 +1416,7 @@ function validateCustomField($type, &$data, $col_Name, &$aErrors)
 		case 10:
 			if (strlen($data) != 0)
 			{
-				$data = eregi_replace($aLocaleInfo["mon_thousands_sep"], "", $data);
+				$data = preg_replace($aLocaleInfo["mon_thousands_sep"], "", $data);
 				if (!is_numeric($data))
 				{
 					$aErrors[$col_Name] = gettext("Invalid Number");
